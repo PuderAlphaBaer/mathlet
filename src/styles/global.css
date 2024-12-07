@@ -1,0 +1,13 @@
+/* src/styles/global.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #A31F34; /* MIT-inspired red */
+  }
+  
