@@ -1,22 +1,26 @@
-// src/components/Navbar.tsx
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-interface NavbarProps {
-  setPage: (page: string) => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ setPage }) => {
+const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo" onClick={() => setPage('home')}>
-        Mathe Netzwerk
-      </div>
-      <ul className="navbar-links">
-        <li onClick={() => setPage('ankuendigungen')}>Ankündigungen</li>
-        <li onClick={() => setPage('foerderung')}>Förderung in Deutschland</li>
-        <li onClick={() => setPage('materialien')}>Materialien</li>
-        <li onClick={() => setPage('kursleiter-werden')}>Kursleiter werden</li>
-        <li onClick={() => setPage('ueber-uns')}>Über uns</li>
+      <ul>
+        <li>
+          <Link to="/">Ankündigungen</Link>
+        </li>
+        <li>
+          <Link to="/foerderung">Förderung in Deutschland</Link>
+        </li>
+        <li>
+          <Link to="/materialien">Materialien</Link>
+        </li>
+        <li>
+          <Link to="/kursleiter">Kursleiter werden</Link>
+        </li>
+        <li>
+          <Link to="/ueber-uns">Über uns</Link>
+        </li>
       </ul>
     </nav>
   );
